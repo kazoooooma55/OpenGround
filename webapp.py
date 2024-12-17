@@ -8,17 +8,17 @@ from io import BytesIO
 st.title('検量線グラフ')
 
 # ユーザー入力
-st.write('濃度(x)と測定値(y)の値を入力してください:')
+st.write('標準液の濃度と電位の値(mv)を入力してください:')
 concentration_input = st.text_input(
-    '濃度(x) (カンマ区切り)', '0.1, 0.2, 0.3, 0.4, 0.5')
+    '標準液 (カンマ区切り)', '0.1, 0.2, 0.3, 0.4, 0.5')
 absorbance_input = st.text_input(
-    '測定値(y) (カンマ区切り)', '0.05, 0.10, 0.15, 0.20, 0.25')
+    '電位 (カンマ区切り)', '0.05, 0.10, 0.15, 0.20, 0.25')
 
 graph_title = st.text_input('グラフのタイトル', '検量線グラフ')
 x_label = st.text_input('横軸のラベル', 'ex) 濃度 (c)')
-y_label = st.text_input('縦軸のラベル', 'ex) 吸光度 (Abs)')
-legend_label = st.text_input('凡例のラベル', 'データ')
-legend_line = st.text_input('近似直線のラベル', '近似直線')
+y_label = st.text_input('縦軸のラベル', 'ex) 電位 (Abs)')
+legend_label = st.text_input('凡例のラベル', '標準液')
+legend_line = st.text_input('近似直線のラベル', '近似曲線')
 legend_position = st.selectbox('凡例の位置', ['自動', '右上', '右下', '左上', '左下'])
 include_origin = st.checkbox('原点を通る直線にする', value=True)
 figsize_option = st.selectbox(
