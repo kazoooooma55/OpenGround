@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib_fontja
 import streamlit as st
 from scipy.optimize import curve_fit
 from io import BytesIO
